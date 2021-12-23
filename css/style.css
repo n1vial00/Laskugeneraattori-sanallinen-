@@ -1,0 +1,28 @@
+html {
+    background-color: black;
+    color: green;
+}
+
+input {
+    background-color: black;
+    color: green;
+}
+
+.kaava{
+    display: none;
+}
+
+.oikein {
+    color: blue;
+    background-color: green;
+}
+
+.väärin {
+    color: yellow;
+    background-color: red;
+}
+
+button {
+    background-color: yellow;
+    color: green;
+}
