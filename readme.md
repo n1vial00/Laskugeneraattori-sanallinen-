@@ -4,3 +4,5 @@ Tällä generaattorilla olen luonut oletuksena lääkelaskuja. Laskuihin tulee l
 
 
 Tekijä Aleksi Viitanen
+
+Lääkelaskupohjat: http://paivanlaakelaskut.blogspot.com/
