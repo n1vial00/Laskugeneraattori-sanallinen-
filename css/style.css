@@ -1,5 +1,5 @@
 html {
-    background-color: lightskyblue;
+    background-color: rgb(142, 171, 189);
 }
 
 .kaava{
@@ -19,4 +19,9 @@ html {
 button {
     background-color: yellow;
     color: green;
+    font-size: 5em;
+    margin: 5px;
+    border-radius: 1em;
+    padding: 10px;
+    border: black 5px solid;
 }

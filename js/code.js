@@ -43,9 +43,9 @@ function teeLaskut() {
         let div = document.createElement("div");
         let input = document.createElement("input");
         let randomLiuosPitoisuus = document.createElement("span");
-        randomLiuosPitoisuus.textContent = getRndInteger(10,200);
+        randomLiuosPitoisuus.textContent = getRndInteger(10, 200);
         let randomPaino = document.createElement("span");
-        randomPaino.textContent = getRndInteger(45,135);
+        randomPaino.textContent = getRndInteger(2, 135);
         let randomAnnos = document.createElement("span");
         randomAnnos.textContent = Number(getRndInteger(1,100)/getRndInteger(100,500)).toFixed(3);
         let randomPohja = getRndInteger(0,POHJAT.length);
@@ -56,6 +56,10 @@ function teeLaskut() {
         randomLiuosPitoisuus.classList.add("liuos")
         randomPaino.classList.add("paino");
         randomAnnos.classList.add("annos");
+
+        if(POHJAT[randomPohja][POHJAT[randomPohja].length - 1] == 2) {
+            randomAnnos.textContent *= 1000;
+        }
 
         for(j = 0; j < POHJAT[randomPohja].length; j++) {
             if(j == POHJAT[randomPohja].length-1) {
@@ -107,13 +111,13 @@ function tarkista() {
         let vastaus = 0;
         switch(Number(kaavat[i].textContent)) {
             case 0:
-                vastaus = Number((((annokset[i].textContent * painot[i].textContent) / 3 /* <-- Tän vois kans vaihtaa muuttujaksi */) * 1000) * (1 / liuokset[i].textContent)).toFixed(3);
+                vastaus = Number((((annokset[i].textContent * painot[i].textContent) / 3 /* <-- Tän vois kans vaihtaa muuttujaksi */) * 1000) * (1 / liuokset[i].textContent)).toFixed(1);
                 break;
             case 1:
-                vastaus = Number((annokset[i].textContent * painot[i].textContent * 1000) * (1 / liuokset[i].textContent)).toFixed(3);
+                vastaus = Number((annokset[i].textContent * painot[i].textContent * 1000) * (1 / liuokset[i].textContent)).toFixed(1);
                 break;
             case 2:
-                vastaus = Number((((annokset[i].textContent * painot[i].textContent)) / 2) * (1 / liuokset[i].textContent)).toFixed(3);
+                vastaus = Number((((annokset[i].textContent * painot[i].textContent)) / 2) * (1 / liuokset[i].textContent)).toFixed(1);
                 break;
         }
         if(Number(vastaukset[i].value) == Number(vastaus)) {
